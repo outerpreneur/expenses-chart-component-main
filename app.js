@@ -4,7 +4,8 @@
     const chart = document.querySelector("#chart");
     const date = new Date();
     const dayOfWeek = date.getDay()
-    let counter = 0
+    console.log(dayOfWeek)
+    let counter = 1
 
 
 data.forEach(day => {
