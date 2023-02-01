@@ -228,3 +228,20 @@ hr {
     font-size: 18px;
     font-weight: 600;
 }
+
+
+/* Responsive styles */
+
+@media screen and (max-width: 1000px) {
+    main {
+        width: 90%;
+    }
+
+    .chart-data {
+        width: 30px;
+    }
+
+    .spending-week h1 {
+        font-size: 1.5em;
+    }
+}
