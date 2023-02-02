@@ -1,147 +1,73 @@
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
 
 :root {
---Soft-red: hsl(10, 79%, 65%);
---Cyan: hsl(186, 34%, 60%);
---Dark-brown: hsl(25, 47%, 15%);
---Medium-brown: hsl(28, 10%, 53%);
---Cream: hsl(27, 66%, 92%);
---Very-pale-orange: hsl(33, 100%, 98%);
-
---font: 'DM Sans', sans-serif;
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
 }
 
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
 body {
+  background-color: var(--Cream);
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  color: var(--Medium-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+.main {
+  max-width: 400px;
+  width: 100%;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
+.balance {
+  background-color: var(--Soft-red);
+  color: var(--Cream);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
+.balance h1 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+.balance span {
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-
-/* End reset */
-
-body {
-    background-color: var(--Cream);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font);
+.balance img {
+  width: 4rem;
 }
 
-main {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
+.container {
+  background-color: var(--Very-pale-orange);
+  border-radius: 0.8rem;
+  overflow: hidden;
 }
-
-.balance-section {
-    background-color: var(--Soft-red);
-    border-radius: 1em;
-    padding: 2em;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-}
-
-.expenses-section {
-    background-color: #fff;
-    border-radius: 1em;
-    padding: 2em;
-}
-
-/* inner styles */
-
-/* top part */
-.my-balance h3   {
-    font-weight: 300;
-}
-
-.my-balance span {
-    font-size: 2em;
-    font-weight: 600;
-}
-
-.balance-section img {
-    width: 90px;
-}
-
-/* chart */
 
 .chart {
   padding: 2rem 1.5rem;
+}
+
+.chart h2 {
+  font-size: 1.8rem;
+  color: var(--Dark-brown);
 }
 
 .bars {
@@ -151,59 +77,80 @@ main {
   align-items: flex-end;
   margin-bottom: 2rem;
 }
-  
 
-/* bottom part */
-
-hr {
-    color: var(--Medium-brown);
-    margin: 2em 0;
-    opacity: 0.5;
+.bars div[class|="bar"] {
+  position: relative;
 }
 
-.totals {
-    display: grid;
-    grid-template-areas:
-     "area1 area4"
-     "area2 area3";
+.bars div[class|="bar"] span:first-child {
+  position: relative;
+  top: -0.5rem;
+  background-color: var(--Dark-brown);
+  color: #fff;
+  font-size: 0.813rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.3rem;
+  opacity: 0;
+  transition: 0.3s;
 }
 
-.total-this-month {
-    grid-area: area1;
-    font-weight: 300;
+.bars div[class|="bar"]:hover span:first-child {
+  opacity: 1;
 }
 
-.expense-this-month {
-    grid-area: area2;
-    font-size: 2.5em;
-    font-weight: 600;
-    color: var(--Dark-brown);
+.bar {
+  background-color: var(--Soft-red);
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: .3rem;
 }
 
+.day {
+  display: block;
+  text-align: center;
+  font-size: 0.813rem;
+  position: relative;
+  padding-top: 1rem;
+  color: var(--Medium-brown);
+}
+
+.today {
+  background: var(--Cyan) !important;
+}
+
+.decoration {
+  height: 2px;
+  background-color: var(--Cream);
+  margin: 1rem 1.5rem 2rem;
+}
+
+.footer {
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+}
+
+.total,
 .last-month {
-    grid-area: area3;
-    text-align: right;
+  font-size: 1.125rem;
+  color: var(--Medium-brown);
+}
+
+.total span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--Dark-brown);
+}
+
+.last-month p {
+  width: max-content;
 }
 
 .last-month span {
-    color: var(--Dark-brown);
-    font-size: 18px;
-    font-weight: 600;
-}
-
-
-/* Responsive styles */
-
-@media screen and (max-width: 1000px) {
-    main {
-        width: 90%;
-    }
-
-    .chart-data {
-        width: 30px;
-    }
-
-    .spending-week h1 {
-        font-size: 1.5em;
-    }
+  font-weight: 700;
+  display: block;
+  color: var(--Dark-brown);
+  text-align: right;
 }

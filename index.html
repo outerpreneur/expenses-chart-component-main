@@ -2,93 +2,80 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="Assets/images/favicon-32x32.png" />
   <title>Frontend Mentor | Expenses chart component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <main>
-    <section class="balance-section">
-      <div class="my-balance">
-        <h3>My balance</h3>
+  <main class="main">
+    <header class="balance">
+      <div>
+        <h1>My balance</h1>
         <span>$921.48</span>
       </div>
-      <img src="./images/logo.svg" alt="logo">
-    </section>
-    <section class="expenses-section">
-      <section class="spending-week">
-        <h1> Spending - Last 7 days</h1>
-        <div class="chart">
-          <h2>Spending - Last 7 days</h2>
-          <div class="bars">
-            <div class="bar-mon">
-              <span class="value"></span>
-              <div class="bar"></div>
-              <span class="day">mon</span>
-            </div>
-            <div class="bar-tue">
-              <span class="value"></span>
-              <div class="bar"></div>
-              <span class="day">tue</span>
-            </div>
-            <div class="bar-wed">
-              <span class="value"></span>
-              <div class="bar today"></div>
-              <span class="day">wed</span>
-            </div>
-            <div class="bar-thu">
-              <span class="value"></span>
-              <div class="bar"></div>
-              <span class="day">thu</span>
-            </div>
-            <div class="bar-fri">
-              <span class="value"></span>
-              <div class="bar"></div>
-              <span class="day">fri</span>
-            </div>
-            <div class="bar-sat">
-              <span class="value"></span>
-              <div class="bar"></div>
-              <span class="day">sat</span>
-            </div>
-            <div class="bar-sun">
-              <span class="value"></span>
-              <div class="bar"></div>
-              <span class="day">sun</span>
-            </div>
+      <img src="Assets/images/logo.svg" alt="" />
+    </header>
+    <div class="container">
+      <div class="chart">
+        <h2>Spending - Last 7 days</h2>
+        <div class="bars">
+          <div class="bar-mon">
+            <span class="value"></span>
+            <div class="bar"></div>
+            <span class="day">mon</span>
           </div>
-      </section>
-      <section class="bottom-section">
-        <hr>
-        <div class="totals">
-          <h3 class="total-this-month">Total this month</h3>
-          <span class="expense-this-month">$478.33</span>
-          <div class="last-month">
-            <span>+2.4%</span>
-            <h3>from last month</h3>
+          <div class="bar-tue">
+            <span class="value"></span>
+            <div class="bar"></div>
+            <span class="day">tue</span>
+          </div>
+          <div class="bar-wed">
+            <span class="value"></span>
+            <div class="bar today"></div>
+            <span class="day">wed</span>
+          </div>
+          <div class="bar-thu">
+            <span class="value"></span>
+            <div class="bar"></div>
+            <span class="day">thu</span>
+          </div>
+          <div class="bar-fri">
+            <span class="value"></span>
+            <div class="bar"></div>
+            <span class="day">fri</span>
+          </div>
+          <div class="bar-sat">
+            <span class="value"></span>
+            <div class="bar"></div>
+            <span class="day">sat</span>
+          </div>
+          <div class="bar-sun">
+            <span class="value"></span>
+            <div class="bar"></div>
+            <span class="day">sun</span>
           </div>
         </div>
-      </section>
-    </section>
-    <script src="app.js"></script>
+      </div>
+      <div class="decoration"></div>
+      <div class="footer">
+        <div class="total">
+          Total this month
+          <span>$478.33</span>
+        </div>
+        <div class="last-month">
+          <span>+2.4%</span>
+          <p>from last month</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
 </body>
-</main>
 
 </html>
