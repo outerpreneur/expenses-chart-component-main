@@ -140,55 +140,17 @@ main {
 
 /* chart */
 
-.spending-week h1 {
-    font-size: 2em;
-    color: var(--Dark-brown);
+.chart {
+  padding: 2rem 1.5rem;
 }
 
-#chart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.bars {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
 }
-
-#chart > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    height: 300px;
-    width: 100%;
-    margin: 0px -1px;
-}
-
-.chart-data {
-    width: 50px;
-    background-color: hsl(10, 79%, 65%);
-    border-radius: 4px;
-}
-
-.chart-data:hover {
-    opacity: 0.7;
-}
-  
-  .week-days {
-    margin-top: 5px;
-    font-size: 13px;
-    color: hsl(28, 10%, 53%);
-}
-  
-  .active {
-    background-color: hsl(186, 34%, 60%);
-}
-  
-  .percentage-data {
-    padding: 7px;
-    margin-bottom: 5px;
-    background-color: black;
-    color: white;
-    font-size: 0.8rem;
-    border-radius: 4px;
-  }
   
 
 /* bottom part */
